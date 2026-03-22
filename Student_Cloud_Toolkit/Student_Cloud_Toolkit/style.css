@@ -1,0 +1,239 @@
+*{
+box-sizing:border-box;
+font-family:Segoe UI, sans-serif;
+}
+
+body{
+margin:0;
+background:linear-gradient(135deg,#d6f0ff,#ffd6ec);
+color:#333;
+transition:0.3s;
+}
+
+/* Header */
+
+header{
+background:white;
+padding:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+header h1{
+color:#4a6cf7;
+}
+
+.theme-switch button{
+margin-left:10px;
+padding:8px 12px;
+border:none;
+border-radius:6px;
+cursor:pointer;
+background:#4a6cf7;
+color:white;
+}
+
+/* Dashboard */
+
+.dashboard{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:25px;
+padding:40px;
+}
+
+/* Cards */
+
+.card{
+background:white;
+width:300px;
+padding:25px;
+border-radius:15px;
+box-shadow:0 10px 20px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+/* Titles */
+
+.card h2{
+color:#4a6cf7;
+margin-bottom:15px;
+}
+
+/* Inputs */
+
+input,select{
+width:100%;
+padding:10px;
+margin:8px 0;
+border-radius:8px;
+border:1px solid #ddd;
+}
+
+/* Buttons */
+
+button{
+width:100%;
+padding:10px;
+border:none;
+border-radius:8px;
+background:linear-gradient(45deg,#7cc7ff,#ff9ed2);
+color:white;
+font-weight:bold;
+cursor:pointer;
+margin-top:10px;
+}
+
+button:hover{
+opacity:0.9;
+}
+
+/* Results */
+
+#downloadLink a{
+color:#4a6cf7;
+font-weight:bold;
+}
+
+/* Dark theme */
+
+.dark-mode{
+background:linear-gradient(135deg,#1e1e2f,#2b2b45);
+color:white;
+}
+
+.dark-mode header{
+background:#2b2b45;
+}
+
+.dark-mode .card{
+background:#3a3a55;
+color:white;
+}
+
+.dark-mode input,
+.dark-mode select{
+background:#2b2b45;
+color:white;
+border:1px solid #555;
+}
+
+/* ========================= */
+/* Planner Cards (Matches UI) */
+/* ========================= */
+
+.assignment-card{
+background: rgba(255,255,255,0.9);
+padding:15px;
+margin-top:12px;
+border-radius:12px;
+box-shadow:0 6px 15px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.assignment-card:hover{
+transform: translateY(-3px);
+}
+
+/* Dark mode support */
+.dark-mode .assignment-card{
+background:#44445f;
+}
+
+/* Title */
+.assignment-card h3{
+margin:0;
+color:#4a6cf7;
+}
+
+/* Info text */
+.assignment-card p{
+margin:5px 0;
+font-size:14px;
+}
+
+/* Status colors */
+.assignment-card .status{
+font-weight:bold;
+}
+
+.status.overdue{
+color:#ff4d4d;
+}
+
+.status.soon{
+color:#ffa500;
+}
+
+.status.ok{
+color:#4CAF50;
+}
+
+/* Action buttons (icons) */
+.actions{
+display:flex;
+justify-content:flex-end;
+gap:10px;
+margin-top:10px;
+}
+
+/* Icon buttons */
+.actions button{
+width:auto;
+padding:8px 10px;
+border-radius:8px;
+font-size:14px;
+}
+
+/* Edit */
+.edit-btn{
+background:#4CAF50;
+}
+
+/* Delete */
+.delete-btn{
+background:#ff4d4d;
+}
+
+/* Hover effects */
+.edit-btn:hover{
+background:#43a047;
+}
+
+.delete-btn:hover{
+background:#e60000;
+}
+
+/* Nearby Places cards */
+#nearbyResults .assignment-card{
+background: rgba(255,255,255,0.9);
+padding:15px;
+margin:10px 0;
+border-radius:12px;
+box-shadow:0 6px 15px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+#nearbyResults .assignment-card:hover{
+transform: translateY(-3px);
+}
+
+.dark-mode #nearbyResults .assignment-card{
+background:#44445f;
+}
+
+#nearbyResults h4{
+margin:0 0 5px 0;
+color:#4a6cf7;
+}
+#nearbyResults p{
+margin:3px 0;
+font-size:14px;
+}
