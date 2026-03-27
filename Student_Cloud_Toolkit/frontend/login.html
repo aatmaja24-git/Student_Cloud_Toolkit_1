@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🎓 Student Cloud Toolkit</h1>
+</header>
+
+<main class="dashboard">
+    <div class="card">
+        <h2>🔐 Login</h2>
+
+        <input type="text" id="loginUser" placeholder="Username">
+        <input type="password" id="loginPass" placeholder="Password">
+
+        <button id="loginBtn" type="button">Login</button>
+
+        <p style="text-align:center; margin-top:10px;">
+            Don't have an account?
+        </p>
+
+        <button id="gotoRegisterBtn" type="button">Register</button>
+    </div>
+</main>
+
+<script src="auth.js"></script>
+<script>
+    redirectIfLoggedIn();
+</script>
+
+</body>
+</html>

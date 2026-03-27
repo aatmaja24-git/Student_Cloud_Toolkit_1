@@ -1,0 +1,14 @@
+{
+  "name": "student-toolkit",
+  "version": "1.0.0",
+  "description": "Cloud Toolkit App",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.1690.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  }
+}

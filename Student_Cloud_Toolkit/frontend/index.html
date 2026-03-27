@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎓 Student Cloud Toolkit</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+<header>
+    <h1>🎓 Student Cloud Toolkit</h1>
+
+    <div class="theme-switch">
+        <button onclick="setTheme('light')" type="button">☀ Light</button>
+        <button onclick="setTheme('dark')" type="button">🌙 Dark</button>
+        <button id="logoutBtn" type="button">🚪 Logout</button>
+    </div>
+</header>
+
+<main class="dashboard">
+
+    <div class="card">
+        <h2><i class="fa-solid fa-file-arrow-down"></i> Compress Assignment</h2>
+
+        <input type="file" id="fileInput" accept=".pdf,.docx,.txt">
+        <button onclick="uploadFile()" type="button">Compress File</button>
+
+        <p id="status"></p>
+        <div id="downloadLink"></div>
+    </div>
+
+    <div class="card">
+        <h2><i class="fa-solid fa-map-location-dot"></i> Nearby Places Dashboard</h2>
+
+        <input type="number" step="any" id="latitude" placeholder="Latitude" value="53.354089">
+        <input type="number" step="any" id="longitude" placeholder="Longitude" value="-6.257427">
+        <input type="text" id="placeType" placeholder="Place type or keyword (e.g., park, cafe)">
+        <input type="number" step="0.1" id="radius" placeholder="Radius (km)" value="1">
+
+        <button onclick="searchNearby()" type="button">
+            <i class="fa-solid fa-magnifying-glass"></i> Search Nearby
+        </button>
+        <button onclick="useCurrentLocation()" type="button">
+            <i class="fa-solid fa-location-crosshairs"></i> Use Current Location
+        </button>
+        <button onclick="clearNearbyResults()" type="button">
+            <i class="fa-solid fa-trash"></i> Clear
+        </button>
+
+        <div id="nearbyResults"></div>
+    </div>
+
+    <div class="card">
+        <h2><i class="fa-solid fa-calendar-check"></i> Academic Planner</h2>
+
+        <input type="text" id="assignmentTitle" placeholder="Assignment Name">
+        <input type="date" id="deadline">
+
+        <select id="country">
+            <option value="IE">Ireland</option>
+            <option value="IN">India</option>
+            <option value="US">USA</option>
+        </select>
+
+        <button onclick="addAssignment()" type="button">Add Assignment</button>
+
+        <div id="plannerResult"></div>
+    </div>
+
+</main>
+
+<script src="auth.js"></script>
+<script src="theme.js"></script>
+<script src="compressor.js"></script>
+<script src="nearby.js"></script>
+<script src="planner.js"></script>
+<script>
+    checkAuth();
+</script>
+
+</body>
+</html>
