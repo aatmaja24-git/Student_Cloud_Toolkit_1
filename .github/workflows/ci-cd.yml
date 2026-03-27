@@ -81,6 +81,7 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }}
           aws-region: us-east-1
 
       - name: Upload frontend to S3
@@ -96,7 +97,7 @@ jobs:
         run: |
           aws s3 cp backend.zip s3://${{ secrets.EB_S3_BUCKET }}/backend-${{ github.run_number }}.zip
 
-      - name: Create new Elastic Beanstalk application version
+      - name: Create Elastic Beanstalk application version
         run: |
           aws elasticbeanstalk create-application-version \
             --application-name "${{ secrets.EB_APPLICATION_NAME }}" \
