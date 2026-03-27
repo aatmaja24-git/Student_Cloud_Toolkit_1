@@ -104,6 +104,11 @@ jobs:
             --version-label "v-${{ github.run_number }}" \
             --source-bundle S3Bucket="${{ secrets.EB_S3_BUCKET }}",S3Key="backend-${{ github.run_number }}.zip"
 
+      - name: Check Elastic Beanstalk environments
+        run: |
+          aws elasticbeanstalk describe-environments \
+            --application-name "${{ secrets.EB_APPLICATION_NAME }}"
+
       - name: Update Elastic Beanstalk environment
         run: |
           aws elasticbeanstalk update-environment \
